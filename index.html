@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        
+            <img class="logo" src="./assets/Frame 6.png" id="logo" alt="">
+            <h1 class="title">E N C R I P T A D O R</h1>
+        
+    </header>
+    <main>
+        <video id="video-background" autoplay muted loop>
+            <source src="../assets/waos.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <div class="main-container">
+            <section class="page-section mid-size" id="input-section">
+                <textarea  name="input" id="input" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                <div class="information-box" id="information-box">
+                    <img class="info-logo" src="./assets/info.svg" alt="">
+                    <h6 class="info" id="info">Solo letras minusculas y sin acentos</h6>
+                </div>
+                <div class="botones">
+                    <button id="btn-encrypt" onclick="actionEncrypt()" disabled>Encriptar</button>
+                    <button id="btn-decrypt" onclick="actionDecrypt()" disabled>Desencriptar</button>
+                </div>
+            </section>
+            
+            <section class="page-section mid-size">
+                <textarea class="output" id="output"></textarea>
+                <div class="botones">
+                    <button class="btn-copiar" onclick="copy()" >Copiar</button>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
