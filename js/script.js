@@ -87,9 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 info.classList.remove('destacar');
             }
         }
-
-        
-
     }
 
     textarea.addEventListener('input', validateInput);
