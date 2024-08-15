@@ -61,16 +61,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnDecrypt = document.getElementById('btn-decrypt');
     const info = document.getElementById('info');
 
+
     function validateInput() {
         const value = textarea.value;
         const hasUpperCase = /[A-Z]/.test(value);
         const hasSpecialChars = /[^a-z0-9\s]/.test(value);
+        const regex = /\d+/g.test(value);
+
         if ( value.trim() === '') {
             btnEncrypt.disabled = true;
             btnDecrypt.disabled = true;
             section.classList.remove('error');
         } else{
-            if (hasUpperCase || hasSpecialChars ) {
+            if (hasUpperCase || hasSpecialChars || regex ) {
             
             section.classList.add('error');
             btnEncrypt.disabled = true;
